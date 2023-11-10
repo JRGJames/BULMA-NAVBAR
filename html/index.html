@@ -8,43 +8,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+    </script>
+
     <header>
         <nav class="navbar is-light">
-            <div class="navbar-brand">
-                <a href=""><img class="ml-3" src="../img/Pornhub-Logo.png" alt="" style="height: 5em;"></a>
+    <div class="navbar-brand is-align-items-center">
+        <a href=""><img class="ml-3" src="../img/F1.svg.png" alt="" style="height: 2em;"></a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbar" class="navbar-menu navbar-end">
+
+        <a href="" class="navbar-item">INICIO</a>
+
+        <a href="" class="navbar-item">BLOG</a>
+
+        <a href="" class="navbar-item">CONTACTO</a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">PROYECTOS</a>
+
+            <div class="navbar-dropdown">
+                <a href="" class="navbar-item has-text-black">PORTAFOLIO</a>
+
+                <hr class="navbar-divider">
+
+                <a href="" class="navbar-item has-text-black">FOXFORUM</a>
             </div>
+        </div>
+    </div>
+</nav>
 
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-              </a>
-              
-            <div class="navbar-menu navbar-end">
-
-                <a href="" class="navbar-item">INICIO</a>
-
-                <a href="" class="navbar-item">BLOG</a>
-
-                <a href="" class="navbar-item">CONTACTO</a>
-
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a href="" class="navbar-link">PROYECTOS</a>
-
-                    <div class="navbar-dropdown">
-                        <a href="" class="navbar-item has-text-black">PORTAFOLIO</a>
-
-                        <hr class="navbar-divider">
-
-                        <a href="" class="navbar-item has-text-black">FOXFORUM</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
 
     </header>
     <main class="py-6">
